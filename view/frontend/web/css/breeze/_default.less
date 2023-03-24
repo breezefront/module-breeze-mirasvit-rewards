@@ -1,0 +1,16 @@
+@text__color__muted: #7d7d7d;
+
+& when (@critical) {
+    @import "Mirasvit_RewardsCheckout::css/source/module/mirasvit_rewards.less";
+    @import "Mirasvit_RewardsCheckout::css/source/module/_rewards.less";
+    @import "Mirasvit_RewardsCheckout::css/source/module/_product_points.less";
+}
+
+& when not (@critical) {
+    @import "Mirasvit_RewardsCheckout::css/source/module/_account.less";
+    @import "Mirasvit_RewardsCheckout::css/source/module/_grid.less";
+    @import "Mirasvit_RewardsCheckout::css/source/module/_grid.less";
+    @import "Mirasvit_RewardsCheckout::css/source/module/_tiers.less";
+}
+
+@import "_fixes.less";

@@ -15,7 +15,8 @@ define([
         component: 'Mirasvit_RewardsCheckout/js/view/rewards-notifications', // Breeze change
 
         initialize: function () {
-            this.initChildren(); // Breeze change: removed _super() call
+            this._super();
+            this.initChildren();
             return this;
         },
 
@@ -34,8 +35,8 @@ define([
                     type: 'GET',
                     dataType: 'JSON',
                     complete: function (data) {
-                        if (data.body.text) {
-                            self.messages(data.body.text); // Breeze change: data.responseJSON.text => data.body.text
+                        if (data.text) {
+                            self.messages(data.text); // Breeze change: data.responseJSON.text => data.text
                         }
                     }
                 });

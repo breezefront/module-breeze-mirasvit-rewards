@@ -35,8 +35,8 @@ define([
                     type: 'GET',
                     dataType: 'JSON',
                     complete: function (data) {
-                        if (data.text) {
-                            self.messages(data.text); // Breeze change: data.responseJSON.text => data.text
+                        if (data.responseJSON.text) {
+                            self.messages(data.responseJSON.text);
                         }
                     }
                 });
